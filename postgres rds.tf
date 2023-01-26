@@ -17,15 +17,13 @@ apply_immediately      = var.apply_immediately
 skip_final_snapshot    = var.skip_final_snapshot
 }
 
-
-
 # db subnet group
 resource "aws_db_subnet_group" "db-subnet-group" {
   name       = "db-subnet-group"
   subnet_ids = [aws_subnet.e-learning-priv-sub2.id, aws_subnet.e-learning-priv-sub1.id]
 
   tags = {
-    Name = "db-subnet-group-${terraform.workspace}"
+    Name = "db-subnet-group"
   }
 }
 
@@ -43,7 +41,6 @@ resource "aws_security_group" "postgresql-rds-sg" {
     
   }
 
-
   egress {
     from_port   = var.db_egress_from_port
     to_port     = var.db_egress_to_port
@@ -52,7 +49,7 @@ resource "aws_security_group" "postgresql-rds-sg" {
   }
 
   tags = {
-    Name = "db-instance-sec-group-${terraform.workspace}"
+    Name = "db-instance-sec-group"
   }
   
 }

@@ -4,7 +4,7 @@ resource "aws_subnet" "e-learning-priv-sub1" {
   cidr_block = var.e-learning-priv-sub1_cidr_block
 availability_zone = var.e-learning-priv-sub1_availability_zone
   tags = {
-    Name = "e-learning-priv-sub1-${terraform.workspace}"
+    Name = "e-learning-priv-sub1"
   }
 }
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "e-learning-priv-sub2" {
   cidr_block = var.e-learning-priv-sub2_cidr_block
 availability_zone = var.e-learning-priv-sub2_availability_zone
   tags = {
-    Name = "e-learning-priv-sub2-${terraform.workspace}"
+    Name = "e-learning-priv-sub2"
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "e-learning-pub-sub1" {
   cidr_block        = var.e-learning-pub-sub1_cidr_block
   availability_zone = var.e-learning-pub-sub1_availability_zone
   tags = {
-    Name            = "e-learning-pub-sub1-${terraform.workspace}"
+    Name            = "e-learning-pub-sub1"
   }
 }
 
@@ -32,6 +32,6 @@ resource "aws_subnet" "e-learning-pub-sub2" {
   cidr_block = var.e-learning-pub-sub2_cidr_block
   availability_zone = var.e-learning-pub-sub2_availability_zone
   tags = {
-    Name = "e-learning-pub-sub2-${terraform.workspace}"
+    Name = "e-learning-pub-sub2"
   }
 }

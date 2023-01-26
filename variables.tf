@@ -31,6 +31,12 @@ variable "enable_dns_support" {
     type    = string
 }
 
+variable "vpc_name" {
+    description = "making vpc_name a variable"
+    default = "e-learning"
+    type    = string
+}
+
 
 # alb
 
@@ -133,6 +139,30 @@ variable "alb_enable_deletion_protection" {
  variable "load_balancer_type" {
     description = "making load_balancer_type a variable"
     default = "application"
+    type    = string
+}
+
+ variable "e-learning-alb-https-listener_port" {
+    description = "making e-learning-alb-https-listener_port a variable"
+    default = 443
+    type    = number
+}
+
+ variable "e-learning-alb-https-listener_protocol" {
+    description = "making e-learning-alb-https-listener_protocol a variable"
+    default = "HTTPS"
+    type    = string
+}
+
+ variable "SSL_policy" {
+    description = "making SSL_policy a variable"
+    default = "ELBSecurityPolicy-2016-08"
+    type    = string
+}
+
+ variable "Environment" {
+    description = "making Environment a variable"
+    default = "production"
     type    = string
 }
 
@@ -402,4 +432,9 @@ variable "db_egress_protocol" {
     description = "making db_egress_protocol a variable"
     default = "-1"
     type    = string
+}
+
+variable "tags" {
+  default     = "PROD"
+  description = "Variable for Tag in different environmets"
 }

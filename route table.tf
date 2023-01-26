@@ -8,7 +8,7 @@ resource "aws_route_table" "e-learning-priv-rt" {
   }
 
   tags = {
-    Name = "e-learning-priv-rt-${terraform.workspace}"
+    Name = "e-learning-priv-rt"
   }
 }
 
@@ -22,6 +22,6 @@ resource "aws_route_table" "e-learning-pub-rt" {
   }
 
   tags = {
-    Name = "e-learning-pub-rt-${terraform.workspace}"
+    Name = "e-learning-pub-rt"
   }
 }

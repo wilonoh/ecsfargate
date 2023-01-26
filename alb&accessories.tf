@@ -50,7 +50,7 @@ resource "aws_security_group" "e-learning-alb-sg" {
   }
 
   tags = {
-    Name = "allow_tls_http-${terraform.workspace}"
+    Name = "allow_tls_http"
   }
 }
 
@@ -74,6 +74,9 @@ resource "aws_lb_listener" "e-learning-alb-http-listener" {
 resource "aws_lb_listener" "e-learning-alb-https-listener" {
   load_balancer_arn = aws_lb.e-learning-alb.arn
   port              = 443
+  #protocol          = var.e-learning-alb-https-listener_protocol
+  #ssl_policy        = var.SSL_policy
+  #port              = 443
   protocol          = "HTTPS"
   ssl_policy        = "ELBSecurityPolicy-2016-08"
   certificate_arn   = aws_acm_certificate.ecs-acm-cert.arn

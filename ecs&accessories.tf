@@ -21,7 +21,7 @@ resource "aws_security_group" "e-learning-ecs-sg" {
     # ipv6_cidr_blocks = ["::/0"]
   }
   tags = {
-    Name = "e-learning-ecs-sg-${terraform.workspace}"
+    Name = "e-learning-ecs-sg"
   }
 }
 

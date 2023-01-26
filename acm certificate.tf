@@ -1,3 +1,4 @@
+
 # acm certificate 
 resource "aws_acm_certificate" "ecs-acm-cert" {
   domain_name       = "tripinky.com"
